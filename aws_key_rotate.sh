@@ -5,7 +5,7 @@
 MYUSER="rgaddam"
 MYCRED="$HOME/.aws/credentials"
 MYNEW="${MYCRED}.NEW"
-MYJUMP="f-jbitops002lv.na.atxglobal.com"
+MYJUMP="myserver.com"
 REMPATH="/home/rgaddam/.aws/credentials"
 COUNT=1
 
@@ -35,4 +35,4 @@ done
 mv $MYNEW $MYCRED
 
 ### Upload our new credentials file to the AWS jumpbox as well ###
-scp -o User=rgaddam@na.atxglobal.com ${MYCRED} ${MYJUMP}:${REMPATH}
+scp -o User=rgaddam@myserver.com ${MYCRED} ${MYJUMP}:${REMPATH}
